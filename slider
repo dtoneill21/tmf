@@ -1,0 +1,122 @@
+body {
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h5 class="title">"My memories of Ted, no matter how funny, just deepen the chasm in my chest, just accentuate how much we have lost.  But, I know that in time these memories of a precious and admired friend will provide solace and guidance for me and, I hope, for all of you." </h5>
+  </div>
+  <div class="card">
+    <h5 class="title">"You could count on him to be there always. It's not the one time that he was there that stands out, it's that he was there every time. I aspire to be as dependable and solid as Ted was, and everyone could learn from his example. Solid, compassionate, a great friend. He will be missed.''</h5>
+  </div>
+  <div class="card">
+    <h5 class="title"> "Whatever he would be doing, whether doing research for a paper, listening to a friend's problems, or swimming a mile, he would make sure to do so fully. His commitment to and zest for life was refreshing and was apparent to everyone who was lucky enough to meet him.''</h5>
+  </div>
+  <div class="card">
+    <h5 class="title">"How my life will honor the loss of Ted Mullin:
+Ted never quit - I will think of Ted when I am thinking of quitting. Ted made the most of his time on earth - I will strive to do the same.
+Ted was an incredible and loyal friend - I will be one, too....I will be good to others and always think of the gift to all of us of Mighty Ted."</h5>
+  
+</body>
